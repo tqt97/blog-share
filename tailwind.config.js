@@ -1,5 +1,5 @@
 // @ts-check
-const {fontFamily} = require('tailwindcss/defaultTheme')
+const { fontFamily } = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 /** @type {import("tailwindcss/types").Config } */
@@ -20,8 +20,8 @@ module.exports = {
       },
       keyframes: {
         meteor: {
-          "0%": {transform: "rotate(215deg) translateX(0)", opacity: 1},
-          "70%": {opacity: 1},
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
+          "70%": { opacity: 1 },
           "100%": {
             transform: "rotate(215deg) translateX(-500px)",
             opacity: 0,
@@ -35,13 +35,13 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
+        sans: ['var(--font-open-sans)', ...fontFamily.sans],
       },
       colors: {
-        primary: colors.sky,
+        primary: colors.blue,
         gray: colors.gray,
       },
-      typography: ({theme}) => ({
+      typography: ({ theme }) => ({
         DEFAULT: {
           css: {
             a: {
@@ -49,7 +49,7 @@ module.exports = {
               '&:hover': {
                 color: `${theme('colors.primary.600')}`,
               },
-              code: {color: theme('colors.primary.400')},
+              code: { color: theme('colors.primary.400') },
             },
             'h1,h2': {
               fontWeight: '700',
@@ -70,7 +70,7 @@ module.exports = {
               '&:hover': {
                 color: `${theme('colors.primary.400')}`,
               },
-              code: {color: theme('colors.primary.400')},
+              code: { color: theme('colors.primary.400') },
             },
             'h1,h2,h3,h4,h5,h6': {
               color: theme('colors.gray.100'),

@@ -1,13 +1,13 @@
 'use client'
-import siteMetadata from '@/data/siteMetadata'
-import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
-import Link from './Link'
-import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
-import SearchButton from './SearchButton'
-import { usePathname } from 'next/navigation'
-import Typewriter from 'typewriter-effect'
+import { usePathname } from 'next/navigation';
+
+import headerNavLinks from '@/data/headerNavLinks';
+import siteMetadata from '@/data/siteMetadata';
+
+import Link from './Link';
+import MobileNav from './MobileNav';
+import SearchButton from './SearchButton';
+import ThemeSwitch from './ThemeSwitch';
 
 const Header = () => {
   const pathname = usePathname()
@@ -19,15 +19,19 @@ const Header = () => {
     <header className="flex items-center justify-between py-10">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
-          <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl sm:text-4xl font-semibold">
-            {`~/${headerTitle}`}{' '}
+          <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl sm:text-3xl font-semibold">
+            <span className='text-2xl bg-black text-white dark:bg-white dark:text-black px-3 py-1 rounded mr-2'>
+              T
+            </span>TuanTQ
+            {/* {siteMetadata.title} */}
+            {/* {`~/${headerTitle}`}{' '}
             <Typewriter
               options={{
                 strings: [''],
                 autoStart: true,
                 loop: true,
               }}
-            />
+            /> */}
           </div>
         </Link>
       </div>
